@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E1FE6981998476500C7C43A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1FE6971998476500C7C43A /* main.cpp */; };
+		3E1FE6A71998481A00C7C43A /* AdvancedObservable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1FE69E1998481A00C7C43A /* AdvancedObservable.cpp */; };
+		3E1FE6A81998481A00C7C43A /* IdentifiableTokenScenarios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1FE6A11998481A00C7C43A /* IdentifiableTokenScenarios.cpp */; };
+		3E1FE6A91998481A00C7C43A /* ObservableScenarios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1FE6A21998481A00C7C43A /* ObservableScenarios.cpp */; };
+		3E1FE6AA1998481A00C7C43A /* ObserverScenarios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1FE6A31998481A00C7C43A /* ObserverScenarios.cpp */; };
+		3E1FE6AB1998481A00C7C43A /* StringLiteralScenarios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1FE6A61998481A00C7C43A /* StringLiteralScenarios.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3E1FE6931998476500C7C43A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3E1FE6871998473700C7C43A /* Exceptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exceptions.h; sourceTree = "<group>"; };
+		3E1FE6881998473700C7C43A /* Identifiable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Identifiable.h; sourceTree = "<group>"; };
+		3E1FE6891998473700C7C43A /* IdentifiableToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdentifiableToken.h; sourceTree = "<group>"; };
+		3E1FE68A1998473700C7C43A /* InvalidArgumentException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidArgumentException.h; sourceTree = "<group>"; };
+		3E1FE68B1998473700C7C43A /* InvalidOperationException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidOperationException.h; sourceTree = "<group>"; };
+		3E1FE68C1998473700C7C43A /* NullArgumentException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NullArgumentException.h; sourceTree = "<group>"; };
+		3E1FE68D1998473700C7C43A /* Observable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Observable.h; sourceTree = "<group>"; };
+		3E1FE68E1998473700C7C43A /* Observer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
+		3E1FE68F1998473700C7C43A /* StringHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringHelper.h; sourceTree = "<group>"; };
+		3E1FE6901998473700C7C43A /* StringLiteral.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringLiteral.h; sourceTree = "<group>"; };
+		3E1FE6951998476500C7C43A /* PlatformDesign */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PlatformDesign; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E1FE6971998476500C7C43A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3E1FE69E1998481A00C7C43A /* AdvancedObservable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdvancedObservable.cpp; sourceTree = "<group>"; };
+		3E1FE69F1998481A00C7C43A /* AdvancedObservable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedObservable.h; sourceTree = "<group>"; };
+		3E1FE6A01998481A00C7C43A /* AdvancedObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedObserver.h; sourceTree = "<group>"; };
+		3E1FE6A11998481A00C7C43A /* IdentifiableTokenScenarios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IdentifiableTokenScenarios.cpp; sourceTree = "<group>"; };
+		3E1FE6A21998481A00C7C43A /* ObservableScenarios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObservableScenarios.cpp; sourceTree = "<group>"; };
+		3E1FE6A31998481A00C7C43A /* ObserverScenarios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObserverScenarios.cpp; sourceTree = "<group>"; };
+		3E1FE6A41998481A00C7C43A /* SimpleObservable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleObservable.h; sourceTree = "<group>"; };
+		3E1FE6A51998481A00C7C43A /* SimpleObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleObserver.h; sourceTree = "<group>"; };
+		3E1FE6A61998481A00C7C43A /* StringLiteralScenarios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringLiteralScenarios.cpp; sourceTree = "<group>"; };
+		3E1FE6AF1998618200C7C43A /* Designer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Designer.h; sourceTree = "<group>"; };
+		3EA7E6E01997314C00838B4D /* libPlatform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPlatform.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E1FE6921998476500C7C43A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA7E6DD1997314C00838B4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E1FE6751998466E00C7C43A /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				3E1FE6871998473700C7C43A /* Exceptions.h */,
+				3E1FE6881998473700C7C43A /* Identifiable.h */,
+				3E1FE6891998473700C7C43A /* IdentifiableToken.h */,
+				3E1FE68A1998473700C7C43A /* InvalidArgumentException.h */,
+				3E1FE68B1998473700C7C43A /* InvalidOperationException.h */,
+				3E1FE68C1998473700C7C43A /* NullArgumentException.h */,
+				3E1FE68D1998473700C7C43A /* Observable.h */,
+				3E1FE68E1998473700C7C43A /* Observer.h */,
+				3E1FE68F1998473700C7C43A /* StringHelper.h */,
+				3E1FE6901998473700C7C43A /* StringLiteral.h */,
+			);
+			path = Include;
+			sourceTree = "<group>";
+		};
+		3E1FE676199846E200C7C43A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		3E1FE6961998476500C7C43A /* PlatformDesign */ = {
+			isa = PBXGroup;
+			children = (
+				3E1FE69E1998481A00C7C43A /* AdvancedObservable.cpp */,
+				3E1FE69F1998481A00C7C43A /* AdvancedObservable.h */,
+				3E1FE6A01998481A00C7C43A /* AdvancedObserver.h */,
+				3E1FE6A11998481A00C7C43A /* IdentifiableTokenScenarios.cpp */,
+				3E1FE6A21998481A00C7C43A /* ObservableScenarios.cpp */,
+				3E1FE6A31998481A00C7C43A /* ObserverScenarios.cpp */,
+				3E1FE6A41998481A00C7C43A /* SimpleObservable.h */,
+				3E1FE6A51998481A00C7C43A /* SimpleObserver.h */,
+				3E1FE6A61998481A00C7C43A /* StringLiteralScenarios.cpp */,
+				3E1FE6971998476500C7C43A /* main.cpp */,
+			);
+			path = PlatformDesign;
+			sourceTree = "<group>";
+		};
+		3E1FE6AC1998533300C7C43A /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				3E1FE6AD1998611A00C7C43A /* Designer */,
+			);
+			path = Submodules;
+			sourceTree = "<group>";
+		};
+		3E1FE6AD1998611A00C7C43A /* Designer */ = {
+			isa = PBXGroup;
+			children = (
+				3E1FE6AE1998614800C7C43A /* Include */,
+			);
+			path = Designer;
+			sourceTree = "<group>";
+		};
+		3E1FE6AE1998614800C7C43A /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				3E1FE6AF1998618200C7C43A /* Designer.h */,
+			);
+			path = Include;
+			sourceTree = "<group>";
+		};
+		3EA7E6D71997314C00838B4D = {
+			isa = PBXGroup;
+			children = (
+				3E1FE6AC1998533300C7C43A /* Submodules */,
+				3E1FE676199846E200C7C43A /* Source */,
+				3E1FE6751998466E00C7C43A /* Include */,
+				3E1FE6961998476500C7C43A /* PlatformDesign */,
+				3EA7E6E11997314C00838B4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3EA7E6E11997314C00838B4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EA7E6E01997314C00838B4D /* libPlatform.a */,
+				3E1FE6951998476500C7C43A /* PlatformDesign */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3EA7E6DE1997314C00838B4D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3E1FE6941998476500C7C43A /* PlatformDesign */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E1FE69B1998476500C7C43A /* Build configuration list for PBXNativeTarget "PlatformDesign" */;
+			buildPhases = (
+				3E1FE6911998476500C7C43A /* Sources */,
+				3E1FE6921998476500C7C43A /* Frameworks */,
+				3E1FE6931998476500C7C43A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlatformDesign;
+			productName = PlatformDesign;
+			productReference = 3E1FE6951998476500C7C43A /* PlatformDesign */;
+			productType = "com.apple.product-type.tool";
+		};
+		3EA7E6DF1997314C00838B4D /* Platform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EA7E6E41997314C00838B4D /* Build configuration list for PBXNativeTarget "Platform" */;
+			buildPhases = (
+				3EA7E6DC1997314C00838B4D /* Sources */,
+				3EA7E6DD1997314C00838B4D /* Frameworks */,
+				3EA7E6DE1997314C00838B4D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Platform;
+			productName = Platform;
+			productReference = 3EA7E6E01997314C00838B4D /* libPlatform.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EA7E6D81997314C00838B4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = MuddledManaged;
+			};
+			buildConfigurationList = 3EA7E6DB1997314C00838B4D /* Build configuration list for PBXProject "Platform" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3EA7E6D71997314C00838B4D;
+			productRefGroup = 3EA7E6E11997314C00838B4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EA7E6DF1997314C00838B4D /* Platform */,
+				3E1FE6941998476500C7C43A /* PlatformDesign */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E1FE6911998476500C7C43A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E1FE6A91998481A00C7C43A /* ObservableScenarios.cpp in Sources */,
+				3E1FE6A81998481A00C7C43A /* IdentifiableTokenScenarios.cpp in Sources */,
+				3E1FE6A71998481A00C7C43A /* AdvancedObservable.cpp in Sources */,
+				3E1FE6981998476500C7C43A /* main.cpp in Sources */,
+				3E1FE6AB1998481A00C7C43A /* StringLiteralScenarios.cpp in Sources */,
+				3E1FE6AA1998481A00C7C43A /* ObserverScenarios.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA7E6DC1997314C00838B4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3E1FE69C1998476500C7C43A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3E1FE69D1998476500C7C43A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3EA7E6E21997314C00838B4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3EA7E6E31997314C00838B4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3EA7E6E51997314C00838B4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3EA7E6E61997314C00838B4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E1FE69B1998476500C7C43A /* Build configuration list for PBXNativeTarget "PlatformDesign" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E1FE69C1998476500C7C43A /* Debug */,
+				3E1FE69D1998476500C7C43A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EA7E6DB1997314C00838B4D /* Build configuration list for PBXProject "Platform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EA7E6E21997314C00838B4D /* Debug */,
+				3EA7E6E31997314C00838B4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EA7E6E41997314C00838B4D /* Build configuration list for PBXNativeTarget "Platform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EA7E6E51997314C00838B4D /* Debug */,
+				3EA7E6E61997314C00838B4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3EA7E6D81997314C00838B4D /* Project object */;
+}
