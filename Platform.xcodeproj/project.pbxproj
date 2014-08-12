@@ -13,6 +13,9 @@
 		3E1FE6A91998481A00C7C43A /* ObservableScenarios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1FE6A21998481A00C7C43A /* ObservableScenarios.cpp */; };
 		3E1FE6AA1998481A00C7C43A /* ObserverScenarios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1FE6A31998481A00C7C43A /* ObserverScenarios.cpp */; };
 		3E1FE6AB1998481A00C7C43A /* StringLiteralScenarios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1FE6A61998481A00C7C43A /* StringLiteralScenarios.cpp */; };
+		3EE778DE1999C4B000A43901 /* ExtensionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE778DD1999C4B000A43901 /* ExtensionManager.cpp */; };
+		3EE778E11999C4CC00A43901 /* Extension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE778DF1999C4CC00A43901 /* Extension.cpp */; };
+		3EE778E21999C4CC00A43901 /* ExtensionLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE778E01999C4CC00A43901 /* ExtensionLoader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +54,14 @@
 		3E1FE6A61998481A00C7C43A /* StringLiteralScenarios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringLiteralScenarios.cpp; sourceTree = "<group>"; };
 		3E1FE6AF1998618200C7C43A /* Designer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Designer.h; sourceTree = "<group>"; };
 		3EA7E6E01997314C00838B4D /* libPlatform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPlatform.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EE778D81999C46000A43901 /* ExtensionInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionInterface.h; sourceTree = "<group>"; };
+		3EE778D91999C46000A43901 /* ExtensionLoaderInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionLoaderInterface.h; sourceTree = "<group>"; };
+		3EE778DA1999C46000A43901 /* ExtensionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionManager.h; sourceTree = "<group>"; };
+		3EE778DB1999C48700A43901 /* Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extension.h; sourceTree = "<group>"; };
+		3EE778DC1999C48700A43901 /* ExtensionLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionLoader.h; sourceTree = "<group>"; };
+		3EE778DD1999C4B000A43901 /* ExtensionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExtensionManager.cpp; sourceTree = "<group>"; };
+		3EE778DF1999C4CC00A43901 /* Extension.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Extension.cpp; sourceTree = "<group>"; };
+		3EE778E01999C4CC00A43901 /* ExtensionLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExtensionLoader.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +85,11 @@
 		3E1FE6751998466E00C7C43A /* Include */ = {
 			isa = PBXGroup;
 			children = (
+				3EE778D61999C30D00A43901 /* OSDependent */,
+				3EE778D81999C46000A43901 /* ExtensionInterface.h */,
+				3EE778D91999C46000A43901 /* ExtensionLoaderInterface.h */,
+				3EE778DC1999C48700A43901 /* ExtensionLoader.h */,
+				3EE778DA1999C46000A43901 /* ExtensionManager.h */,
 				3E1FE6871998473700C7C43A /* Exceptions.h */,
 				3E1FE6881998473700C7C43A /* Identifiable.h */,
 				3E1FE6891998473700C7C43A /* IdentifiableToken.h */,
@@ -91,6 +107,8 @@
 		3E1FE676199846E200C7C43A /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3EE778D41999C05F00A43901 /* OSDependent */,
+				3EE778DD1999C4B000A43901 /* ExtensionManager.cpp */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -154,6 +172,39 @@
 				3E1FE6951998476500C7C43A /* PlatformDesign */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3EE778D41999C05F00A43901 /* OSDependent */ = {
+			isa = PBXGroup;
+			children = (
+				3EE778D51999C08800A43901 /* Mac */,
+			);
+			path = OSDependent;
+			sourceTree = "<group>";
+		};
+		3EE778D51999C08800A43901 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				3EE778DF1999C4CC00A43901 /* Extension.cpp */,
+				3EE778E01999C4CC00A43901 /* ExtensionLoader.cpp */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		3EE778D61999C30D00A43901 /* OSDependent */ = {
+			isa = PBXGroup;
+			children = (
+				3EE778D71999C41B00A43901 /* Mac */,
+			);
+			path = OSDependent;
+			sourceTree = "<group>";
+		};
+		3EE778D71999C41B00A43901 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				3EE778DB1999C48700A43901 /* Extension.h */,
+			);
+			path = Mac;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +299,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE778DE1999C4B000A43901 /* ExtensionManager.cpp in Sources */,
+				3EE778E11999C4CC00A43901 /* Extension.cpp in Sources */,
+				3EE778E21999C4CC00A43901 /* ExtensionLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
