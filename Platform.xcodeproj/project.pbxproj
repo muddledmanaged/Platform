@@ -18,6 +18,23 @@
 		3EE778E21999C4CC00A43901 /* ExtensionLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE778E01999C4CC00A43901 /* ExtensionLoader.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3E2A1CD5199C519700EA94BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E2A1CD1199C519600EA94BD /* SimpleTestExtension.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3E2A1CCA199C519600EA94BD;
+			remoteInfo = SimpleTestExtension;
+		};
+		3E2A1CDF199C589D00EA94BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E2A1CD1199C519600EA94BD /* SimpleTestExtension.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E2A1CC9199C519600EA94BD;
+			remoteInfo = SimpleTestExtension;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		3E1FE6931998476500C7C43A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -53,6 +70,7 @@
 		3E1FE6A51998481A00C7C43A /* SimpleObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleObserver.h; sourceTree = "<group>"; };
 		3E1FE6A61998481A00C7C43A /* StringLiteralScenarios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringLiteralScenarios.cpp; sourceTree = "<group>"; };
 		3E1FE6AF1998618200C7C43A /* Designer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Designer.h; sourceTree = "<group>"; };
+		3E2A1CD1199C519600EA94BD /* SimpleTestExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SimpleTestExtension.xcodeproj; path = SimpleTestExtension/SimpleTestExtension.xcodeproj; sourceTree = "<group>"; };
 		3EA7E6E01997314C00838B4D /* libPlatform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPlatform.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE778D81999C46000A43901 /* ExtensionInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionInterface.h; sourceTree = "<group>"; };
 		3EE778D91999C46000A43901 /* ExtensionLoaderInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionLoaderInterface.h; sourceTree = "<group>"; };
@@ -116,6 +134,7 @@
 		3E1FE6961998476500C7C43A /* PlatformDesign */ = {
 			isa = PBXGroup;
 			children = (
+				3E2A1CC0199C511F00EA94BD /* Extensions */,
 				3E1FE69E1998481A00C7C43A /* AdvancedObservable.cpp */,
 				3E1FE69F1998481A00C7C43A /* AdvancedObservable.h */,
 				3E1FE6A01998481A00C7C43A /* AdvancedObserver.h */,
@@ -152,6 +171,22 @@
 				3E1FE6AF1998618200C7C43A /* Designer.h */,
 			);
 			path = Include;
+			sourceTree = "<group>";
+		};
+		3E2A1CC0199C511F00EA94BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3E2A1CD1199C519600EA94BD /* SimpleTestExtension.xcodeproj */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3E2A1CD2199C519600EA94BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E2A1CD6199C519700EA94BD /* libSimpleTestExtension.dylib */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		3EA7E6D71997314C00838B4D = {
@@ -231,6 +266,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3E2A1CE0199C589D00EA94BD /* PBXTargetDependency */,
 			);
 			name = PlatformDesign;
 			productName = PlatformDesign;
@@ -273,6 +309,12 @@
 			mainGroup = 3EA7E6D71997314C00838B4D;
 			productRefGroup = 3EA7E6E11997314C00838B4D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3E2A1CD2199C519600EA94BD /* Products */;
+					ProjectRef = 3E2A1CD1199C519600EA94BD /* SimpleTestExtension.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3EA7E6DF1997314C00838B4D /* Platform */,
@@ -280,6 +322,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3E2A1CD6199C519700EA94BD /* libSimpleTestExtension.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libSimpleTestExtension.dylib;
+			remoteRef = 3E2A1CD5199C519700EA94BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E1FE6911998476500C7C43A /* Sources */ = {
@@ -306,6 +358,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E2A1CE0199C589D00EA94BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SimpleTestExtension;
+			targetProxy = 3E2A1CDF199C589D00EA94BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3E1FE69C1998476500C7C43A /* Debug */ = {
