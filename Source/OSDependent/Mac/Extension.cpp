@@ -20,20 +20,20 @@ Platform::Extension::Extension (void * handle)
         throw Platform::NullArgumentException("handle");
     }
 
-    fdGetExtensionProtocolVersion = reinterpret_cast<decltype(fdGetExtensionProtocolVersion)>(dlsym(handle, "mmGetExtensionProtocolVersion"));
-    if (fdGetExtensionProtocolVersion == nullptr)
+    mmGetExtensionProtocolVersion = reinterpret_cast<decltype(mmGetExtensionProtocolVersion)>(dlsym(handle, "mmGetExtensionProtocolVersion"));
+    if (mmGetExtensionProtocolVersion == nullptr)
     {
         throw Platform::InvalidArgumentException("Cannot find mmGetExtensionProtocolVersion.");
     }
 
-    fdGetExtensionAddress = reinterpret_cast<decltype(fdGetExtensionAddress)>(dlsym(handle, "mmGetExtensionAddress"));
-    if (fdGetExtensionAddress == nullptr)
+    mmGetExtensionAddress = reinterpret_cast<decltype(mmGetExtensionAddress)>(dlsym(handle, "mmGetExtensionAddress"));
+    if (mmGetExtensionAddress == nullptr)
     {
         throw Platform::InvalidArgumentException("Cannot find mmGetExtensionAddress.");
     }
 
-    fdSendMessage = reinterpret_cast<decltype(fdSendMessage)>(dlsym(handle, "mmSendMessage"));
-    if (fdSendMessage == nullptr)
+    mmSendMessage = reinterpret_cast<decltype(mmSendMessage)>(dlsym(handle, "mmSendMessage"));
+    if (mmSendMessage == nullptr)
     {
         throw Platform::InvalidArgumentException("Cannot find mmSendMessage.");
     }
@@ -46,16 +46,16 @@ Platform::Extension::~Extension ()
 
 const int Platform::Extension::protocolVersion () const
 {
-
+    return mmGetExtensionProtocolVersion();
 }
 
 const std::string Platform::Extension::address () const
 {
-
+    return mmGetExtensionAddress();
 }
 
 const std::string Platform::Extension::sendMessage (const std::string & message) const
 {
-
+    return mmSendMessage(message);
 }
 

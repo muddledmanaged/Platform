@@ -8,6 +8,7 @@
 #ifndef Platform_ExtensionManager_h
 #define Platform_ExtensionManager_h
 
+#include <list>
 #include <string>
 #include <unordered_map>
 
@@ -19,6 +20,14 @@ namespace MuddledManaged
     {
         class ExtensionManager
         {
+        private:
+            class ExtensionLoader
+            {
+            public:
+                static ExtensionInterface load (const std::string & path);
+                static std::list<ExtensionInterface> loadAll (const std::string & path);
+            };
+
         public:
             ExtensionManager ();
             ~ExtensionManager ();
