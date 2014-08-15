@@ -18,7 +18,7 @@ namespace MuddledManaged
         {
         public:
             Extension (void * handle);
-            ~Extension ();
+            virtual ~Extension ();
 
             virtual const int protocolVersion () const;
             virtual const std::string address () const;

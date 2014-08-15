@@ -9,6 +9,7 @@
 #define Platform_ExtensionManager_h
 
 #include <list>
+#include <memory>
 #include <string>
 #include <unordered_map>
 
@@ -24,8 +25,8 @@ namespace MuddledManaged
             class ExtensionLoader
             {
             public:
-                static ExtensionInterface load (const std::string & path);
-                static std::list<ExtensionInterface> loadAll (const std::string & path);
+                static std::shared_ptr<ExtensionInterface> load (const std::string & path);
+                static std::list<std::shared_ptr<ExtensionInterface>> loadAll (const std::string & path);
             };
 
         public:
@@ -37,7 +38,7 @@ namespace MuddledManaged
             virtual const std::string sendMessage (const std::string & address, const std::string & message) const;
 
         private:
-            std::unordered_map<std::string, ExtensionInterface> loadedExtensions;
+            std::unordered_map<std::string, std::shared_ptr<ExtensionInterface>> loadedExtensions;
         };
 
     } // namespace Platform

@@ -10,6 +10,7 @@
 #include "../../../Include/Exceptions.h"
 #include "../../../Include/OSDependent/Mac/Extension.h"
 
+using namespace std;
 using namespace MuddledManaged;
 
 Platform::Extension::Extension (void * handle)
@@ -23,19 +24,19 @@ Platform::Extension::Extension (void * handle)
     mmGetExtensionProtocolVersion = reinterpret_cast<decltype(mmGetExtensionProtocolVersion)>(dlsym(handle, "mmGetExtensionProtocolVersion"));
     if (mmGetExtensionProtocolVersion == nullptr)
     {
-        throw Platform::InvalidArgumentException("Cannot find mmGetExtensionProtocolVersion.");
+        throw Platform::InvalidOperationException("Cannot find mmGetExtensionProtocolVersion.");
     }
 
     mmGetExtensionAddress = reinterpret_cast<decltype(mmGetExtensionAddress)>(dlsym(handle, "mmGetExtensionAddress"));
     if (mmGetExtensionAddress == nullptr)
     {
-        throw Platform::InvalidArgumentException("Cannot find mmGetExtensionAddress.");
+        throw Platform::InvalidOperationException("Cannot find mmGetExtensionAddress.");
     }
 
     mmSendMessage = reinterpret_cast<decltype(mmSendMessage)>(dlsym(handle, "mmSendMessage"));
     if (mmSendMessage == nullptr)
     {
-        throw Platform::InvalidArgumentException("Cannot find mmSendMessage.");
+        throw Platform::InvalidOperationException("Cannot find mmSendMessage.");
     }
 }
 
@@ -49,12 +50,12 @@ const int Platform::Extension::protocolVersion () const
     return mmGetExtensionProtocolVersion();
 }
 
-const std::string Platform::Extension::address () const
+const string Platform::Extension::address () const
 {
     return mmGetExtensionAddress();
 }
 
-const std::string Platform::Extension::sendMessage (const std::string & message) const
+const string Platform::Extension::sendMessage (const string & message) const
 {
     return mmSendMessage(message);
 }
