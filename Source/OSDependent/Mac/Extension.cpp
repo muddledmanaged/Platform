@@ -13,36 +13,40 @@
 using namespace std;
 using namespace MuddledManaged;
 
-Platform::Extension::Extension (void * handle)
-: handle(handle)
+Platform::Extension::Extension (void * handle, const std::string & path)
+: mHandle(handle), mPath(path)
 {
     if (handle == nullptr)
     {
         throw Platform::NullArgumentException("handle");
     }
+    if (path == "")
+    {
+        throw Platform::InvalidArgumentException("path", "path cannot be empty.");
+    }
 
-    mmGetExtensionProtocolVersion = reinterpret_cast<decltype(mmGetExtensionProtocolVersion)>(dlsym(handle, "mmGetExtensionProtocolVersion"));
+    mmGetExtensionProtocolVersion = reinterpret_cast<decltype(mmGetExtensionProtocolVersion)>(dlsym(mHandle, "mmGetExtensionProtocolVersion"));
     if (mmGetExtensionProtocolVersion == nullptr)
     {
-        throw Platform::InvalidOperationException("Cannot find mmGetExtensionProtocolVersion.");
+        throw Platform::InvalidExtensionException(mPath, "Cannot find mmGetExtensionProtocolVersion.");
     }
 
-    mmGetExtensionAddress = reinterpret_cast<decltype(mmGetExtensionAddress)>(dlsym(handle, "mmGetExtensionAddress"));
+    mmGetExtensionAddress = reinterpret_cast<decltype(mmGetExtensionAddress)>(dlsym(mHandle, "mmGetExtensionAddress"));
     if (mmGetExtensionAddress == nullptr)
     {
-        throw Platform::InvalidOperationException("Cannot find mmGetExtensionAddress.");
+        throw Platform::InvalidExtensionException(mPath, "Cannot find mmGetExtensionAddress.");
     }
 
-    mmSendMessage = reinterpret_cast<decltype(mmSendMessage)>(dlsym(handle, "mmSendMessage"));
+    mmSendMessage = reinterpret_cast<decltype(mmSendMessage)>(dlsym(mHandle, "mmSendMessage"));
     if (mmSendMessage == nullptr)
     {
-        throw Platform::InvalidOperationException("Cannot find mmSendMessage.");
+        throw Platform::InvalidExtensionException(mPath, "Cannot find mmSendMessage.");
     }
 }
 
 Platform::Extension::~Extension ()
 {
-    dlclose(handle);
+    dlclose(mHandle);
 }
 
 const int Platform::Extension::protocolVersion () const

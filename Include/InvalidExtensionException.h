@@ -1,12 +1,12 @@
 //
-//  InvalidOperationException.h
+//  InvalidExtensionException.h
 //  Platform
 //
-//  Created by Wahid Tanner on 3/26/13.
+//  Created by Wahid Tanner on 8/16/14.
 //
 
-#ifndef Platform_InvalidOperationException_h
-#define Platform_InvalidOperationException_h
+#ifndef Platform_InvalidExtensionException_h
+#define Platform_InvalidExtensionException_h
 
 #include <stdexcept>
 #include <string>
@@ -15,30 +15,35 @@ namespace MuddledManaged
 {
     namespace Platform
     {
-        class InvalidOperationException : public std::logic_error
+        class InvalidExtensionException : public std::logic_error
         {
         public:
-            InvalidOperationException (const std::string & message = std::string(""))
+            InvalidExtensionException (const std::string & path, const std::string & message = std::string(""))
             : std::logic_error("")
             {
-                mMessage = "Opperation is not allowed";
+                mMessage = "Extension is invalid";
                 
+                if (path.size() != 0)
+                {
+                    mMessage += ": " + path;
+                }
+
                 if (message.size() != 0)
                 {
                     mMessage += ": " + message;
                 }
             }
             
-            virtual ~InvalidOperationException ()
+            virtual ~InvalidExtensionException ()
             { }
             
             virtual const char * what () const noexcept
             {
                 return mMessage.c_str();
-            }
+            }            
             
         protected:
-            InvalidOperationException ()
+            InvalidExtensionException ()
             : std::logic_error("")
             { }
 
@@ -49,7 +54,7 @@ namespace MuddledManaged
     
 } // namespace MuddledManaged
 
-#endif // Platform_InvalidOperationException_h
+#endif // Platform_InvalidExtensionException_h
 
 
 

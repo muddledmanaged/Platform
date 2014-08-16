@@ -17,7 +17,7 @@ namespace MuddledManaged
         class NullArgumentException : public InvalidArgumentException
         {
         public:
-            NullArgumentException (const std::string & argumentName = std::string(""))
+            NullArgumentException (const std::string & argumentName)
             {
                 mMessage = "Argument cannot be null";
                 
@@ -28,6 +28,10 @@ namespace MuddledManaged
             }
             
             virtual ~NullArgumentException ()
+            { }
+
+        protected:
+            NullArgumentException ()
             { }
         };
         

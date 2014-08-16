@@ -18,7 +18,7 @@ namespace MuddledManaged
         class InvalidArgumentException : public std::invalid_argument
         {
         public:
-            InvalidArgumentException (const std::string & argumentName = std::string(""), const std::string & message = std::string(""))
+            InvalidArgumentException (const std::string & argumentName, const std::string & message = std::string(""))
             : std::invalid_argument("")
             {
                 mMessage = "Argument is invalid";
@@ -43,6 +43,10 @@ namespace MuddledManaged
             }            
             
         protected:
+            InvalidArgumentException ()
+            : std::invalid_argument("")
+            { }
+
             std::string mMessage;
         };
         

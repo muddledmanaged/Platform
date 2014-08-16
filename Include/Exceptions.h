@@ -9,6 +9,7 @@
 #define Platform_Exceptions_h
 
 #include "InvalidArgumentException.h"
+#include "InvalidExtensionException.h"
 #include "InvalidOperationException.h"
 #include "NullArgumentException.h"
 

@@ -17,7 +17,7 @@ namespace MuddledManaged
         class Extension : public ExtensionInterface
         {
         public:
-            Extension (void * handle);
+            Extension (void * handle, const std::string & path);
             virtual ~Extension ();
 
             virtual const int protocolVersion () const;
@@ -25,7 +25,11 @@ namespace MuddledManaged
             virtual const std::string sendMessage (const std::string & message) const;
 
         private:
-            void * handle;
+            Extension (const Extension & src) = delete;
+            Extension & operator = (const Extension & rhs) = delete;
+
+            void * mHandle;
+            std::string mPath;
 
             const int (*mmGetExtensionProtocolVersion)();
             const char * (*mmGetExtensionAddress)();
