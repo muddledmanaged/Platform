@@ -30,15 +30,21 @@ namespace MuddledManaged
             };
 
         public:
-            ExtensionManager ();
             ~ExtensionManager ();
+
+            static ExtensionManager * instance ();
 
             virtual void load (const std::string & path) const;
             virtual void loadAll (const std::string & path) const;
             virtual const std::string sendMessage (const std::string & address, const std::string & message) const;
 
         private:
-            std::unordered_map<std::string, std::shared_ptr<ExtensionInterface>> loadedExtensions;
+            ExtensionManager ();
+            ExtensionManager (const ExtensionManager & src) = delete;
+            ExtensionManager & operator = (const ExtensionManager & rhs) = delete;
+
+            static ExtensionManager * mpInstance;
+            std::unordered_map<std::string, std::shared_ptr<ExtensionInterface>> mLoadedExtensions;
         };
 
     } // namespace Platform

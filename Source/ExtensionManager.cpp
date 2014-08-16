@@ -10,18 +10,29 @@
 using namespace std;
 using namespace MuddledManaged;
 
+Platform::ExtensionManager * Platform::ExtensionManager::mpInstance = nullptr;
+
 Platform::ExtensionManager::ExtensionManager ()
 { }
 
 Platform::ExtensionManager::~ExtensionManager ()
 { }
 
+Platform::ExtensionManager * Platform::ExtensionManager::instance ()
+{
+    if (mpInstance == nullptr)
+    {
+        mpInstance = new Platform::ExtensionManager();
+    }
+    return mpInstance;
+}
+
 void Platform::ExtensionManager::load (const string & path) const
 {
     shared_ptr<ExtensionInterface> extension = ExtensionLoader::load(path);
     string address = extension->address();
 
-    //loadedExtensions.emplace(address, extension);
+    //mLoadedExtensions.emplace(address, extension);
 }
 
 void Platform::ExtensionManager::loadAll (const string & path) const
@@ -31,7 +42,7 @@ void Platform::ExtensionManager::loadAll (const string & path) const
 
 const string Platform::ExtensionManager::sendMessage (const string & address, const string & message) const
 {
-    shared_ptr<ExtensionInterface> extension = loadedExtensions.at(address);
+    shared_ptr<ExtensionInterface> extension = mLoadedExtensions.at(address);
 
     return extension->sendMessage(message);
 }

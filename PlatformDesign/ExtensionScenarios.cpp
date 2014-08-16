@@ -14,9 +14,11 @@
 using namespace std;
 using namespace MuddledManaged;
 
-DESIGNER_SCENARIO( Extension, "Construction/Normal", "Extension can be loaded." )
+DESIGNER_SCENARIO( Extension, "Construction/Singleton", "Extension manager instances are the same." )
 {
-    Platform::ExtensionManager extMgr;
-    string path = "libSimpleTestExtension.dylib";
-    extMgr.load(path);
+    Platform::ExtensionManager * pExtMgr1 = Platform::ExtensionManager::instance();
+    Platform::ExtensionManager * pExtMgr2 = Platform::ExtensionManager::instance();
+
+    verifyTrue(pExtMgr1 != nullptr);
+    verifySame(pExtMgr1, pExtMgr2);
 }
