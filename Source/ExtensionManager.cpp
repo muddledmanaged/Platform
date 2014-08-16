@@ -16,19 +16,22 @@ Platform::ExtensionManager::ExtensionManager ()
 Platform::ExtensionManager::~ExtensionManager ()
 { }
 
-virtual void Platform::ExtensionManager::load (const string & path) const
+void Platform::ExtensionManager::load (const string & path) const
 {
     shared_ptr<ExtensionInterface> extension = ExtensionLoader::load(path);
-    loadedExtensions.emplace(extension->address(), extension);
+    string address = extension->address();
+
+    //loadedExtensions.emplace(address, extension);
 }
 
-virtual void Platform::ExtensionManager::loadAll (const string & path) const
+void Platform::ExtensionManager::loadAll (const string & path) const
 {
 
 }
 
-virtual const string Platform::ExtensionManager::sendMessage (const string & address, const string & message) const
+const string Platform::ExtensionManager::sendMessage (const string & address, const string & message) const
 {
     shared_ptr<ExtensionInterface> extension = loadedExtensions.at(address);
+
     return extension->sendMessage(message);
 }

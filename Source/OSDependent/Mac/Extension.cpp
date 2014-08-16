@@ -57,6 +57,6 @@ const string Platform::Extension::address () const
 
 const string Platform::Extension::sendMessage (const string & message) const
 {
-    return mmSendMessage(message);
+    return mmSendMessage(message.c_str());
 }
 

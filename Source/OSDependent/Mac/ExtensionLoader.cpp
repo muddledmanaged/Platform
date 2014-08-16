@@ -5,15 +5,18 @@
 //  Created by Wahid Tanner on 6/15/14.
 //
 
+#include <dlfcn.h>
+
+#include "../../../Include/Exceptions.h"
 #include "../../../Include/ExtensionManager.h"
 #include "../../../Include/OSDependent/Mac/Extension.h"
 
 using namespace std;
 using namespace MuddledManaged;
 
-static shared_ptr<ExtensionInterface> Platform::ExtensionManager::ExtensionLoader::load (const string & path)
+ shared_ptr<Platform::ExtensionInterface> Platform::ExtensionManager::ExtensionLoader::load (const string & path)
 {
-    void * handle = dlopen(path, RTLD_LOCAL);
+    void * handle = dlopen(path.c_str(), RTLD_LOCAL);
     if (handle)
     {
         return shared_ptr<ExtensionInterface>(new Extension(handle));
@@ -21,9 +24,9 @@ static shared_ptr<ExtensionInterface> Platform::ExtensionManager::ExtensionLoade
     throw Platform::InvalidArgumentException("path", "Cannot open extension.");
 }
 
-static list<shared_ptr<ExtensionInterface>> Platform::ExtensionManager::ExtensionLoader::loadAll (const string & path)
+list<shared_ptr<Platform::ExtensionInterface>> Platform::ExtensionManager::ExtensionLoader::loadAll (const string & path)
 {
-    list<shared_ptr<ExtensionInterface>> extensions;
+    list<shared_ptr<Platform::ExtensionInterface>> extensions;
 
     return extensions;
 }

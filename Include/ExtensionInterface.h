@@ -17,7 +17,8 @@ namespace MuddledManaged
         class ExtensionInterface
         {
         public:
-            virtual ~ExtensionInterface () = 0;
+            virtual ~ExtensionInterface ()
+            { }
             
             virtual const int protocolVersion () const = 0;
             virtual const std::string address () const = 0;
