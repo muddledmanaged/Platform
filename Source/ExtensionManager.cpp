@@ -27,17 +27,24 @@ Platform::ExtensionManager * Platform::ExtensionManager::instance ()
     return mpInstance;
 }
 
-void Platform::ExtensionManager::load (const string & path) const
+void Platform::ExtensionManager::load (const string & path)
 {
-    shared_ptr<ExtensionInterface> extension = ExtensionLoader::load(path);
+    shared_ptr<Platform::ExtensionInterface> extension = ExtensionLoader::load(path);
     string address = extension->address();
 
-    //mLoadedExtensions.emplace(address, extension);
+    mLoadedExtensions.emplace(address, extension);
 }
 
-void Platform::ExtensionManager::loadAll (const string & path) const
+void Platform::ExtensionManager::loadAll (const string & path)
 {
+    list<shared_ptr<ExtensionInterface>> extensions = ExtensionLoader::loadAll(path);
 
+    for (auto & singleExtension : extensions)
+    {
+        string address = singleExtension->address();
+
+        mLoadedExtensions.emplace(address, singleExtension);
+    }
 }
 
 const string Platform::ExtensionManager::sendMessage (const string & address, const string & message) const

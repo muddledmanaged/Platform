@@ -21,3 +21,26 @@ DESIGNER_SCENARIO( MacExtension, "Operation/Normal", "Extension can be loaded." 
 
     pExtMgr->load(path);
 }
+
+DESIGNER_SCENARIO( MacExtension, "Operation/Normal", "Extension can be loaded multiple times." )
+{
+    Platform::ExtensionManager * pExtMgr = Platform::ExtensionManager::instance();
+    string path = "libSimpleTestExtension.dylib";
+
+    pExtMgr->load(path);
+    pExtMgr->load(path);
+}
+
+DESIGNER_SCENARIO( MacExtension, "Operation/Normal", "Extension methods can be called." )
+{
+    Platform::ExtensionManager * pExtMgr = Platform::ExtensionManager::instance();
+    string path = "libSimpleTestExtension.dylib";
+    string address = "com.muddledmanaged.simpletestextension";
+    string message = "test";
+    string reply = "";
+
+    pExtMgr->load(path);
+    reply = pExtMgr->sendMessage(address, message);
+
+    verifyEqual("Success from SimpleTestClass: test", reply);
+}
