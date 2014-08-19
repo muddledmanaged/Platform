@@ -44,3 +44,17 @@ DESIGNER_SCENARIO( MacExtension, "Operation/Normal", "Extension methods can be c
 
     verifyEqual("Success from SimpleTestClass: test", reply);
 }
+
+DESIGNER_SCENARIO( MacExtension, "Operation/Unknown", "Extension methods can be unrecognized." )
+{
+    Platform::ExtensionManager * pExtMgr = Platform::ExtensionManager::instance();
+    string path = "libSimpleTestExtension.dylib";
+    string address = "com.muddledmanaged.simpletestextension";
+    string message = "123";
+    string reply = "";
+
+    pExtMgr->load(path);
+    reply = pExtMgr->sendMessage(address, message);
+
+    verifyEqual("SimpleTestExtension failed to recognize message", reply);
+}
