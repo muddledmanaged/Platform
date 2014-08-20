@@ -55,17 +55,17 @@ Platform::Extension::~Extension ()
     dlclose(mHandle);
 }
 
-const int Platform::Extension::protocolVersion () const
+int Platform::Extension::protocolVersion () const
 {
     return mmGetExtensionProtocolVersion();
 }
 
-const string Platform::Extension::address () const
+string Platform::Extension::address () const
 {
     return mmGetExtensionAddress();
 }
 
-const string Platform::Extension::sendMessage (const string & message) const
+string Platform::Extension::sendMessage (const string & message) const
 {
     char * marshalledResult = mmSendMessage(message.c_str());
     string result = marshalledResult;

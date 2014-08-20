@@ -25,7 +25,7 @@ namespace MuddledManaged
             virtual int protocolVersion () const = 0;
             virtual std::string address () const = 0;
             virtual std::string sendMessage (const std::string & message) const = 0;
-            virtual void setExtensionManager (ExtensionManager * pExtensionManager) = 0;
+            virtual void setExtensionManager (ExtensionManager * pExtensionManager) const = 0;
 
         protected:
             ExtensionInterface ()

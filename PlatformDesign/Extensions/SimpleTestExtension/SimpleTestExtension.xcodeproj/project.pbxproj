@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E2A1CDD199C541B00EA94BD /* SimpleTestClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E2A1CDB199C541B00EA94BD /* SimpleTestClass.cpp */; };
 		3E2A1CDE199C541B00EA94BD /* SimpleTestEntry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E2A1CDC199C541B00EA94BD /* SimpleTestEntry.cpp */; };
+		3EE9817F19A458E000C79A4F /* libPlatform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE9817E19A458E000C79A4F /* libPlatform.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +18,7 @@
 		3E2A1CDA199C540000EA94BD /* SimpleTestEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTestEntry.h; sourceTree = "<group>"; };
 		3E2A1CDB199C541B00EA94BD /* SimpleTestClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleTestClass.cpp; sourceTree = "<group>"; };
 		3E2A1CDC199C541B00EA94BD /* SimpleTestEntry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleTestEntry.cpp; sourceTree = "<group>"; };
+		3EE9817E19A458E000C79A4F /* libPlatform.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPlatform.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/MuddledManaged-fhcntcbsdobvamdjdfrjukhvkkge/Build/Products/Debug/libPlatform.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +26,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE9817F19A458E000C79A4F /* libPlatform.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +36,7 @@
 		3E2A1CC1199C519600EA94BD = {
 			isa = PBXGroup;
 			children = (
+				3EE9817E19A458E000C79A4F /* libPlatform.a */,
 				3E2A1CD7199C53B200EA94BD /* Include */,
 				3E2A1CD8199C53BC00EA94BD /* Source */,
 				3E2A1CCB199C519600EA94BD /* Products */,
@@ -208,6 +212,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MuddledManaged-fhcntcbsdobvamdjdfrjukhvkkge/Build/Products/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -216,6 +224,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MuddledManaged-fhcntcbsdobvamdjdfrjukhvkkge/Build/Products/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -239,6 +251,7 @@
 				3E2A1CD0199C519600EA94BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

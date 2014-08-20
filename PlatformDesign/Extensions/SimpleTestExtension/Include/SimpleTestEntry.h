@@ -9,6 +9,7 @@
 #define SimpleTestExtension_SimpleTestEntry_h
 
 #include "../../../../Include/ExtensionManager.h"
+
 extern MuddledManaged::Platform::ExtensionManager * gpExtensionManager;
 
 extern "C"
