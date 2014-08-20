@@ -35,6 +35,8 @@ namespace MuddledManaged
             ~ExtensionManager ();
 
             static ExtensionManager * instance ();
+            
+            char * marshal (const std::string & extensionData) const;
 
             virtual void load (const std::string & path);
             virtual void loadAll (const std::string & path);

@@ -11,27 +11,41 @@
 #include "../Include/SimpleTestClass.h"
 
 using namespace std;
+using namespace MuddledManaged;
 using namespace Extensions;
 
-const int mmGetExtensionProtocolVersion ()
+MuddledManaged::Platform::ExtensionManager * gpExtensionManager = nullptr;
+
+int mmGetExtensionProtocolVersion ()
 {
     return 1;
 }
 
-const char * mmGetExtensionAddress ()
+char * mmGetExtensionAddress ()
 {
-    return "com.muddledmanaged.simpletestextension";
+    return gpExtensionManager->marshal("com.muddledmanaged.simpletestextension");
 }
 
-const char * mmSendMessage (const char * message)
+char * mmSendMessage (const char * message)
 {
     const string msg = message;
+    string result = "";
 
     if (msg == "test")
     {
         SimpleTestClass target;
-        return target.process(msg).data();
+        result = target.process(msg).data();
+    }
+    else
+    {
+        result = "SimpleTestExtension failed to recognize message";
     }
 
-    return "SimpleTestExtension failed to recognize message";
+    //int (MuddledManaged::Platform::ExtensionManager::*pMarshal)(const std::string &) const = &MuddledManaged::Platform::ExtensionManager::marshal;
+    return gpExtensionManager->marshal(result);
+}
+
+void mmSetExtensionManager (MuddledManaged::Platform::ExtensionManager * pExtensionManager)
+{
+    gpExtensionManager = pExtensionManager;
 }

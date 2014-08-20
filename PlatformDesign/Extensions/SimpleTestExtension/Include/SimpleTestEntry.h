@@ -8,11 +8,15 @@
 #ifndef SimpleTestExtension_SimpleTestEntry_h
 #define SimpleTestExtension_SimpleTestEntry_h
 
+#include "../../../../Include/ExtensionManager.h"
+extern MuddledManaged::Platform::ExtensionManager * gpExtensionManager;
+
 extern "C"
 {
-    const int mmGetExtensionProtocolVersion ();
-    const char * mmGetExtensionAddress ();
-    const char * mmSendMessage (const char * message);
+    int mmGetExtensionProtocolVersion ();
+    char * mmGetExtensionAddress ();
+    char * mmSendMessage (const char * message);
+    void mmSetExtensionManager (MuddledManaged::Platform::ExtensionManager * pExtensionManager);
 }
 
 #endif // SimpleTestExtension_SimpleTestEntry_h

@@ -20,9 +20,10 @@ namespace MuddledManaged
             Extension (void * handle, const std::string & path);
             virtual ~Extension ();
 
-            virtual const int protocolVersion () const;
-            virtual const std::string address () const;
-            virtual const std::string sendMessage (const std::string & message) const;
+            virtual int protocolVersion () const;
+            virtual std::string address () const;
+            virtual std::string sendMessage (const std::string & message) const;
+            virtual void setExtensionManager (ExtensionManager * pExtensionManager) const;
 
         private:
             Extension (const Extension & src) = delete;
@@ -31,9 +32,10 @@ namespace MuddledManaged
             void * mHandle;
             std::string mPath;
 
-            const int (*mmGetExtensionProtocolVersion)();
-            const char * (*mmGetExtensionAddress)();
-            const char * (*mmSendMessage)(const char *);
+            int (*mmGetExtensionProtocolVersion)();
+            char * (*mmGetExtensionAddress)();
+            char * (*mmSendMessage)(const char *);
+            void (*mmSetExtensionManager)(ExtensionManager *);
         };
 
     } // namespace Platform

@@ -42,6 +42,12 @@ Platform::Extension::Extension (void * handle, const std::string & path)
     {
         throw Platform::InvalidExtensionException(mPath, "Cannot find mmSendMessage.");
     }
+
+    mmSetExtensionManager = reinterpret_cast<decltype(mmSetExtensionManager)>(dlsym(mHandle, "mmSetExtensionManager"));
+    if (mmSetExtensionManager == nullptr)
+    {
+        throw Platform::InvalidExtensionException(mPath, "Cannot find mmSetExtensionManager.");
+    }
 }
 
 Platform::Extension::~Extension ()
@@ -61,6 +67,15 @@ const string Platform::Extension::address () const
 
 const string Platform::Extension::sendMessage (const string & message) const
 {
-    return mmSendMessage(message.c_str());
+    char * marshalledResult = mmSendMessage(message.c_str());
+    string result = marshalledResult;
+    delete [] marshalledResult;
+
+    return result;
+}
+
+void Platform::Extension::setExtensionManager (ExtensionManager * pExtensionManager) const
+{
+    mmSetExtensionManager(pExtensionManager);
 }
 
