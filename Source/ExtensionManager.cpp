@@ -30,11 +30,11 @@ Platform::ExtensionManager * Platform::ExtensionManager::instance ()
 char * Platform::ExtensionManager::marshal (const std::string & extensionData) const
 {
     size_t length = extensionData.length();
-    char * localData = new char[length + 1];
-    extensionData.copy(localData, length);
-    localData[length] = '\0';
+    char * pHostData = new char[length + 1];
+    extensionData.copy(pHostData, length);
+    pHostData[length] = '\0';
 
-    return localData;
+    return pHostData;
 }
 
 void Platform::ExtensionManager::load (const string & path)

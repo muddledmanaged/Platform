@@ -62,7 +62,11 @@ int Platform::Extension::protocolVersion () const
 
 string Platform::Extension::address () const
 {
-    return mmGetExtensionAddress();
+    char * marshalledResult = mmGetExtensionAddress();
+    string result = marshalledResult;
+    delete [] marshalledResult;
+
+    return result;
 }
 
 string Platform::Extension::sendMessage (const string & message) const

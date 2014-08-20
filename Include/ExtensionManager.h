@@ -32,8 +32,6 @@ namespace MuddledManaged
             };
 
         public:
-            typedef char * (ExtensionManager::*MarshalMethod) (const std::string & extensionData) const;
-
             ~ExtensionManager ();
 
             static ExtensionManager * instance ();

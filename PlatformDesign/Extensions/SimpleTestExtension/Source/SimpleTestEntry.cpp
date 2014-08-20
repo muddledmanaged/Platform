@@ -15,7 +15,6 @@ using namespace MuddledManaged;
 using namespace Extensions;
 
 MuddledManaged::Platform::ExtensionManager * gpExtensionManager = nullptr;
-MuddledManaged::Platform::ExtensionManager::MarshalMethod pMarshal = &MuddledManaged::Platform::ExtensionManager::marshal;
 
 int mmGetExtensionProtocolVersion ()
 {
@@ -24,7 +23,7 @@ int mmGetExtensionProtocolVersion ()
 
 char * mmGetExtensionAddress ()
 {
-    return (gpExtensionManager->*pMarshal)("com.muddledmanaged.simpletestextension");
+    return gpExtensionManager->marshal("com.muddledmanaged.simpletestextension");
 }
 
 char * mmSendMessage (const char * message)
@@ -42,7 +41,7 @@ char * mmSendMessage (const char * message)
         result = "SimpleTestExtension failed to recognize message";
     }
 
-    return (gpExtensionManager->*pMarshal)(result);
+    return gpExtensionManager->marshal(result);
 }
 
 void mmSetExtensionManager (MuddledManaged::Platform::ExtensionManager * pExtensionManager)
