@@ -1,0 +1,4 @@
+message InitialRequest
+{
+    required string request = 1;
+}

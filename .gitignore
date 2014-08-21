@@ -44,3 +44,6 @@ profile
 *.DS_Store
 *.swp
 *.out
+
+# Generated output from tools
+Generated/
