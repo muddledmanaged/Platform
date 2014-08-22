@@ -81,6 +81,7 @@
 		3E6A2A8819A5B5AA0036BC24 /* InitialRequest.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InitialRequest.pb.cc; sourceTree = "<group>"; };
 		3E6A2A8919A5B5AA0036BC24 /* InitialRequest.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialRequest.pb.h; sourceTree = "<group>"; };
 		3E936B0319A0073F00688107 /* InvalidExtensionException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidExtensionException.h; sourceTree = "<group>"; };
+		3E95BEC719A7024500C48D8B /* InitialResponse.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InitialResponse.proto; sourceTree = "<group>"; };
 		3EA7E6E01997314C00838B4D /* libPlatform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPlatform.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA8A168199FBD76005D63E4 /* MacExtensionScenarios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MacExtensionScenarios.cpp; sourceTree = "<group>"; };
 		3EE778D81999C46000A43901 /* ExtensionInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionInterface.h; sourceTree = "<group>"; };
@@ -205,6 +206,7 @@
 			children = (
 				3E6A2A8619A5B31D0036BC24 /* Generated */,
 				3E6A2A8719A5B38A0036BC24 /* InitialRequest.proto */,
+				3E95BEC719A7024500C48D8B /* InitialResponse.proto */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
