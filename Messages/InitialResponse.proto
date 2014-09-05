@@ -1,8 +1,0 @@
-package MuddledManaged.Platform
-
-message InitialResponse
-{
-    required string response = 1;
-    optional string reservationToken = 2;
-    optional string reservationTimeFrame = 3;
-}

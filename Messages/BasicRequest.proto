@@ -1,0 +1,68 @@
+package MuddledManaged.Platform;
+
+enum ParameterValueOperation
+{
+    None = 0;
+    Equal = 1;
+    Greater = 2;
+    GreaterInclusive = 3;
+    Lesser = 4;
+    LesserInclusive = 5;
+    Contain = 6;
+    ContainBy = 7;
+    Intersect = 8;
+    MatchPattern = 9;
+}
+
+enum ParameterValueType
+{
+    Single = 0;
+    Range = 1;
+    Set = 2;
+}
+
+enum ParameterGroupOperation
+{
+    And = 0;
+    Or = 1;
+    Exclusive = 2;
+}
+
+enum ParameterOperationInverter
+{
+    Normal = 0;
+    Inverted = 1;
+}
+
+message RequestParameterValue
+{
+    optional string label = 1;
+    optional ParameterValueOperation operation = 2;
+    optional ParameterOperationInverter inverter = 3;
+    optional int32 order = 4;
+    repeated string values = 5;
+    optional ParameterValueType valueType = 6;
+}
+
+message RequestParameterGroup
+{
+    required ParameterGroupOperation operation = 1;
+    optional ParameterOperationInverter inverter = 2;
+    optional int32 order = 3;
+    repeated RequestParameterValue values = 4;
+    repeated RequestParameterGroup groups = 5;
+}
+
+message RequestParameter
+{
+    required string name = 1;
+    optional RequestParameterValue value = 2;
+    optional RequestParameterGroup group = 3;
+}
+
+message BasicRequest
+{
+    required string action = 1;
+    repeated RequestParameter parameters = 2;
+    optional string reservationToken = 3;
+}

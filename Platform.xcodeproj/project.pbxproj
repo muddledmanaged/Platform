@@ -15,8 +15,12 @@
 		3E1FE6AB1998481A00C7C43A /* StringLiteralScenarios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1FE6A61998481A00C7C43A /* StringLiteralScenarios.cpp */; };
 		3E2E6EBF199EFE230039CF79 /* ExtensionScenarios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E6EBD199EFE230039CF79 /* ExtensionScenarios.cpp */; };
 		3E2E6EC0199F00970039CF79 /* libPlatform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA7E6E01997314C00838B4D /* libPlatform.a */; };
-		3E6A2A8A19A5B5AA0036BC24 /* InitialRequest.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A2A8819A5B5AA0036BC24 /* InitialRequest.pb.cc */; };
-		3E6A2A8B19A5B5AA0036BC24 /* InitialRequest.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E6A2A8919A5B5AA0036BC24 /* InitialRequest.pb.h */; };
+		3E50566F19B9767700BBF9B8 /* BasicRequest.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3E50566919B9767700BBF9B8 /* BasicRequest.pb.cc */; };
+		3E50567019B9767700BBF9B8 /* BasicRequest.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E50566A19B9767700BBF9B8 /* BasicRequest.pb.h */; };
+		3E50567119B9767700BBF9B8 /* BasicResponse.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3E50566B19B9767700BBF9B8 /* BasicResponse.pb.cc */; };
+		3E50567219B9767700BBF9B8 /* BasicResponse.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E50566C19B9767700BBF9B8 /* BasicResponse.pb.h */; };
+		3E50567319B9767700BBF9B8 /* ExtensionManager.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3E50566D19B9767700BBF9B8 /* ExtensionManager.pb.cc */; };
+		3E50567419B9767700BBF9B8 /* ExtensionManager.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E50566E19B9767700BBF9B8 /* ExtensionManager.pb.h */; };
 		3EA8A169199FBD76005D63E4 /* MacExtensionScenarios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EA8A168199FBD76005D63E4 /* MacExtensionScenarios.cpp */; };
 		3EE778DE1999C4B000A43901 /* ExtensionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE778DD1999C4B000A43901 /* ExtensionManager.cpp */; };
 		3EE778E11999C4CC00A43901 /* Extension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE778DF1999C4CC00A43901 /* Extension.cpp */; };
@@ -53,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E16424019A83E3B00F7B721 /* ExtensionManager.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ExtensionManager.proto; sourceTree = "<group>"; };
 		3E1FE6871998473700C7C43A /* Exceptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exceptions.h; sourceTree = "<group>"; };
 		3E1FE6881998473700C7C43A /* Identifiable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Identifiable.h; sourceTree = "<group>"; };
 		3E1FE6891998473700C7C43A /* IdentifiableToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdentifiableToken.h; sourceTree = "<group>"; };
@@ -77,11 +82,15 @@
 		3E1FE6AF1998618200C7C43A /* Designer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Designer.h; sourceTree = "<group>"; };
 		3E2A1CD1199C519600EA94BD /* SimpleTestExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SimpleTestExtension.xcodeproj; path = SimpleTestExtension/SimpleTestExtension.xcodeproj; sourceTree = "<group>"; };
 		3E2E6EBD199EFE230039CF79 /* ExtensionScenarios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExtensionScenarios.cpp; sourceTree = "<group>"; };
-		3E6A2A8719A5B38A0036BC24 /* InitialRequest.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InitialRequest.proto; sourceTree = "<group>"; };
-		3E6A2A8819A5B5AA0036BC24 /* InitialRequest.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InitialRequest.pb.cc; sourceTree = "<group>"; };
-		3E6A2A8919A5B5AA0036BC24 /* InitialRequest.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialRequest.pb.h; sourceTree = "<group>"; };
+		3E50566919B9767700BBF9B8 /* BasicRequest.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BasicRequest.pb.cc; sourceTree = "<group>"; };
+		3E50566A19B9767700BBF9B8 /* BasicRequest.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicRequest.pb.h; sourceTree = "<group>"; };
+		3E50566B19B9767700BBF9B8 /* BasicResponse.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BasicResponse.pb.cc; sourceTree = "<group>"; };
+		3E50566C19B9767700BBF9B8 /* BasicResponse.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicResponse.pb.h; sourceTree = "<group>"; };
+		3E50566D19B9767700BBF9B8 /* ExtensionManager.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExtensionManager.pb.cc; sourceTree = "<group>"; };
+		3E50566E19B9767700BBF9B8 /* ExtensionManager.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionManager.pb.h; sourceTree = "<group>"; };
+		3E6A2A8719A5B38A0036BC24 /* BasicRequest.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BasicRequest.proto; sourceTree = "<group>"; };
 		3E936B0319A0073F00688107 /* InvalidExtensionException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidExtensionException.h; sourceTree = "<group>"; };
-		3E95BEC719A7024500C48D8B /* InitialResponse.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InitialResponse.proto; sourceTree = "<group>"; };
+		3E95BEC719A7024500C48D8B /* BasicResponse.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BasicResponse.proto; sourceTree = "<group>"; };
 		3EA7E6E01997314C00838B4D /* libPlatform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPlatform.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA8A168199FBD76005D63E4 /* MacExtensionScenarios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MacExtensionScenarios.cpp; sourceTree = "<group>"; };
 		3EE778D81999C46000A43901 /* ExtensionInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionInterface.h; sourceTree = "<group>"; };
@@ -205,8 +214,9 @@
 			isa = PBXGroup;
 			children = (
 				3E6A2A8619A5B31D0036BC24 /* Generated */,
-				3E6A2A8719A5B38A0036BC24 /* InitialRequest.proto */,
-				3E95BEC719A7024500C48D8B /* InitialResponse.proto */,
+				3E6A2A8719A5B38A0036BC24 /* BasicRequest.proto */,
+				3E95BEC719A7024500C48D8B /* BasicResponse.proto */,
+				3E16424019A83E3B00F7B721 /* ExtensionManager.proto */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -214,8 +224,12 @@
 		3E6A2A8619A5B31D0036BC24 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				3E6A2A8819A5B5AA0036BC24 /* InitialRequest.pb.cc */,
-				3E6A2A8919A5B5AA0036BC24 /* InitialRequest.pb.h */,
+				3E50566919B9767700BBF9B8 /* BasicRequest.pb.cc */,
+				3E50566A19B9767700BBF9B8 /* BasicRequest.pb.h */,
+				3E50566B19B9767700BBF9B8 /* BasicResponse.pb.cc */,
+				3E50566C19B9767700BBF9B8 /* BasicResponse.pb.h */,
+				3E50566D19B9767700BBF9B8 /* ExtensionManager.pb.cc */,
+				3E50566E19B9767700BBF9B8 /* ExtensionManager.pb.h */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -297,7 +311,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E6A2A8B19A5B5AA0036BC24 /* InitialRequest.pb.h in Headers */,
+				3E50567019B9767700BBF9B8 /* BasicRequest.pb.h in Headers */,
+				3E50567419B9767700BBF9B8 /* ExtensionManager.pb.h in Headers */,
+				3E50567219B9767700BBF9B8 /* BasicResponse.pb.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,10 +418,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E50567319B9767700BBF9B8 /* ExtensionManager.pb.cc in Sources */,
 				3EE778DE1999C4B000A43901 /* ExtensionManager.cpp in Sources */,
+				3E50567119B9767700BBF9B8 /* BasicResponse.pb.cc in Sources */,
+				3E50566F19B9767700BBF9B8 /* BasicRequest.pb.cc in Sources */,
 				3EE778E11999C4CC00A43901 /* Extension.cpp in Sources */,
 				3EE778E21999C4CC00A43901 /* ExtensionLoader.cpp in Sources */,
-				3E6A2A8A19A5B5AA0036BC24 /* InitialRequest.pb.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +492,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/local/include,
+					/opt/local/include,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
@@ -512,6 +531,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/local/include,
+					/opt/local/include,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;

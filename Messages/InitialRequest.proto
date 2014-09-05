@@ -1,7 +1,0 @@
-package MuddledManaged.Platform
-
-message InitialRequest
-{
-    required string request = 1;
-    repeated string options = 2;
-}
