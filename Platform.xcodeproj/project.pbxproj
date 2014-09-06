@@ -342,6 +342,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EA7E6E41997314C00838B4D /* Build configuration list for PBXNativeTarget "Platform" */;
 			buildPhases = (
+				3EE1F0F919BAB86300D888DD /* ShellScript */,
 				3EA7E6DC1997314C00838B4D /* Sources */,
 				3EA7E6DD1997314C00838B4D /* Frameworks */,
 				3EA7E6DE1997314C00838B4D /* Headers */,
@@ -397,6 +398,22 @@
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EE1F0F919BAB86300D888DD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${SRCROOT}/Messages\n/opt/local/bin/protoc --cpp_out=Generated *.proto";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E1FE6911998476500C7C43A /* Sources */ = {
