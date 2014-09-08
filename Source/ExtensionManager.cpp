@@ -22,6 +22,10 @@ Platform::ExtensionManager * Platform::ExtensionManager::instance ()
 {
     if (mpInstance == nullptr)
     {
+        // Verify that the version of the library that we linked against is
+        // compatible with the version of the headers we compiled against.
+        GOOGLE_PROTOBUF_VERIFY_VERSION;
+        
         mpInstance = new Platform::ExtensionManager();
     }
     return mpInstance;
@@ -58,8 +62,25 @@ void Platform::ExtensionManager::loadAll (const string & path)
         mLoadedExtensions.emplace(address, singleExtension);
     }
 }
+string Platform::ExtensionManager::sendMessage (const string & message)
+{
+    ExtensionManagerRequest request;
+    ExtensionManagerResponse response;
+    if (!request.ParseFromString(message))
+    {
+        response.mutable_response()->set_errorencountered(true);
+    }
+    else
+    {
+        response.mutable_response()->set_errorencountered(false);
+    }
 
-const string Platform::ExtensionManager::sendMessage (const string & address, const string & message) const
+    string responseString;
+    response.SerializeToString(&responseString);
+    return responseString;
+}
+
+string Platform::ExtensionManager::sendMessage (const string & address, const string & message) const
 {
     shared_ptr<ExtensionInterface> extension = mLoadedExtensions.at(address);
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E2A1CDD199C541B00EA94BD /* SimpleTestClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E2A1CDB199C541B00EA94BD /* SimpleTestClass.cpp */; };
 		3E2A1CDE199C541B00EA94BD /* SimpleTestEntry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E2A1CDC199C541B00EA94BD /* SimpleTestEntry.cpp */; };
+		3E63844919BD5C2F003DFFE6 /* libprotobuf.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E63844819BD5C2F003DFFE6 /* libprotobuf.dylib */; };
 		3EE9817F19A458E000C79A4F /* libPlatform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE9817E19A458E000C79A4F /* libPlatform.a */; };
 /* End PBXBuildFile section */
 
@@ -18,6 +19,7 @@
 		3E2A1CDA199C540000EA94BD /* SimpleTestEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTestEntry.h; sourceTree = "<group>"; };
 		3E2A1CDB199C541B00EA94BD /* SimpleTestClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleTestClass.cpp; sourceTree = "<group>"; };
 		3E2A1CDC199C541B00EA94BD /* SimpleTestEntry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleTestEntry.cpp; sourceTree = "<group>"; };
+		3E63844819BD5C2F003DFFE6 /* libprotobuf.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprotobuf.dylib; path = ../../../../../../../../opt/local/lib/libprotobuf.dylib; sourceTree = "<group>"; };
 		3EE9817E19A458E000C79A4F /* libPlatform.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPlatform.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/MuddledManaged-fhcntcbsdobvamdjdfrjukhvkkge/Build/Products/Debug/libPlatform.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -27,6 +29,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EE9817F19A458E000C79A4F /* libPlatform.a in Frameworks */,
+				3E63844919BD5C2F003DFFE6 /* libprotobuf.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +39,7 @@
 		3E2A1CC1199C519600EA94BD = {
 			isa = PBXGroup;
 			children = (
+				3E63844819BD5C2F003DFFE6 /* libprotobuf.dylib */,
 				3EE9817E19A458E000C79A4F /* libPlatform.a */,
 				3E2A1CD7199C53B200EA94BD /* Include */,
 				3E2A1CD8199C53BC00EA94BD /* Source */,
@@ -170,6 +174,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -203,6 +213,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
@@ -215,6 +231,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MuddledManaged-fhcntcbsdobvamdjdfrjukhvkkge/Build/Products/Debug",
+					/opt/local/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -227,6 +244,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MuddledManaged-fhcntcbsdobvamdjdfrjukhvkkge/Build/Products/Debug",
+					/opt/local/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

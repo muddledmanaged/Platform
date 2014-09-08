@@ -19,7 +19,7 @@ message ExtensionConfiguration
 
 message ExtensionInfo
 {
-    required ExtensionIdentity id = 1;
+    required ExtensionIdentity identity = 1;
     optional string displayName = 2;
     repeated string serviceNames = 3;
     repeated ExtensionConfiguration configurations = 4;

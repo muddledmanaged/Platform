@@ -14,6 +14,7 @@
 #include <unordered_map>
 
 #include "ExtensionInterface.h"
+#include "../Messages/Generated/ExtensionManager.pb.h"
 
 namespace MuddledManaged
 {
@@ -40,7 +41,8 @@ namespace MuddledManaged
 
             virtual void load (const std::string & path);
             virtual void loadAll (const std::string & path);
-            virtual const std::string sendMessage (const std::string & address, const std::string & message) const;
+            virtual std::string sendMessage (const std::string & message);
+            virtual std::string sendMessage (const std::string & address, const std::string & message) const;
 
         private:
             ExtensionManager ();

@@ -1,44 +1,37 @@
 package MuddledManaged.Platform;
 
-enum ParameterValueOperation
-{
-    None = 0;
-    Equal = 1;
-    Greater = 2;
-    GreaterInclusive = 3;
-    Lesser = 4;
-    LesserInclusive = 5;
-    Contain = 6;
-    ContainBy = 7;
-    Intersect = 8;
-    MatchPattern = 9;
-}
-
-enum ParameterValueType
-{
-    Single = 0;
-    Range = 1;
-    Set = 2;
-}
-
-enum ParameterGroupOperation
-{
-    And = 0;
-    Or = 1;
-    Exclusive = 2;
-}
-
-enum ParameterOperationInverter
-{
-    Normal = 0;
-    Inverted = 1;
-}
-
 message RequestParameterValue
 {
+    enum ParameterValueOperation
+    {
+        None = 0;
+        Equal = 1;
+        Greater = 2;
+        GreaterInclusive = 3;
+        Lesser = 4;
+        LesserInclusive = 5;
+        Contain = 6;
+        ContainBy = 7;
+        Intersect = 8;
+        MatchPattern = 9;
+    }
+
+    enum ParameterValueType
+    {
+        Single = 0;
+        Range = 1;
+        Set = 2;
+    }
+
+    enum ParameterValueInverter
+    {
+        Normal = 0;
+        Inverted = 1;
+    }
+
     optional string label = 1;
     optional ParameterValueOperation operation = 2;
-    optional ParameterOperationInverter inverter = 3;
+    optional ParameterValueInverter inverter = 3;
     optional int32 order = 4;
     repeated string values = 5;
     optional ParameterValueType valueType = 6;
@@ -46,8 +39,21 @@ message RequestParameterValue
 
 message RequestParameterGroup
 {
+    enum ParameterGroupOperation
+    {
+        And = 0;
+        Or = 1;
+        Exclusive = 2;
+    }
+
+    enum ParameterGroupInverter
+    {
+        Normal = 0;
+        Inverted = 1;
+    }
+
     required ParameterGroupOperation operation = 1;
-    optional ParameterOperationInverter inverter = 2;
+    optional ParameterGroupInverter inverter = 2;
     optional int32 order = 3;
     repeated RequestParameterValue values = 4;
     repeated RequestParameterGroup groups = 5;

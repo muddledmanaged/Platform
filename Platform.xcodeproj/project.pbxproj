@@ -21,6 +21,8 @@
 		3E50567219B9767700BBF9B8 /* BasicResponse.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E50566C19B9767700BBF9B8 /* BasicResponse.pb.h */; };
 		3E50567319B9767700BBF9B8 /* ExtensionManager.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3E50566D19B9767700BBF9B8 /* ExtensionManager.pb.cc */; };
 		3E50567419B9767700BBF9B8 /* ExtensionManager.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E50566E19B9767700BBF9B8 /* ExtensionManager.pb.h */; };
+		3E63844719BD5BE9003DFFE6 /* libprotobuf.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E63844619BD5BE9003DFFE6 /* libprotobuf.dylib */; };
+		3E63844A19BD5C63003DFFE6 /* libprotobuf.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E63844619BD5BE9003DFFE6 /* libprotobuf.dylib */; };
 		3EA8A169199FBD76005D63E4 /* MacExtensionScenarios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EA8A168199FBD76005D63E4 /* MacExtensionScenarios.cpp */; };
 		3EE778DE1999C4B000A43901 /* ExtensionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE778DD1999C4B000A43901 /* ExtensionManager.cpp */; };
 		3EE778E11999C4CC00A43901 /* Extension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE778DF1999C4CC00A43901 /* Extension.cpp */; };
@@ -88,6 +90,7 @@
 		3E50566C19B9767700BBF9B8 /* BasicResponse.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicResponse.pb.h; sourceTree = "<group>"; };
 		3E50566D19B9767700BBF9B8 /* ExtensionManager.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExtensionManager.pb.cc; sourceTree = "<group>"; };
 		3E50566E19B9767700BBF9B8 /* ExtensionManager.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionManager.pb.h; sourceTree = "<group>"; };
+		3E63844619BD5BE9003DFFE6 /* libprotobuf.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprotobuf.dylib; path = ../../../../../opt/local/lib/libprotobuf.dylib; sourceTree = "<group>"; };
 		3E6A2A8719A5B38A0036BC24 /* BasicRequest.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BasicRequest.proto; sourceTree = "<group>"; };
 		3E936B0319A0073F00688107 /* InvalidExtensionException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidExtensionException.h; sourceTree = "<group>"; };
 		3E95BEC719A7024500C48D8B /* BasicResponse.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BasicResponse.proto; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E2E6EC0199F00970039CF79 /* libPlatform.a in Frameworks */,
+				3E63844A19BD5C63003DFFE6 /* libprotobuf.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E63844719BD5BE9003DFFE6 /* libprotobuf.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +242,7 @@
 		3EA7E6D71997314C00838B4D = {
 			isa = PBXGroup;
 			children = (
+				3E63844619BD5BE9003DFFE6 /* libprotobuf.dylib */,
 				3E6A2A8519A5B3000036BC24 /* Messages */,
 				3E1FE6AC1998533300C7C43A /* Submodules */,
 				3E1FE676199846E200C7C43A /* Source */,
@@ -462,6 +468,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -469,6 +479,10 @@
 		3E1FE69D1998476500C7C43A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -559,6 +573,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -567,6 +585,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
