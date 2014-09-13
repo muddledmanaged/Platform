@@ -60,16 +60,6 @@
 
 /* Begin PBXFileReference section */
 		3E16424019A83E3B00F7B721 /* ExtensionManager.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ExtensionManager.proto; sourceTree = "<group>"; };
-		3E1FE6871998473700C7C43A /* Exceptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exceptions.h; sourceTree = "<group>"; };
-		3E1FE6881998473700C7C43A /* Identifiable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Identifiable.h; sourceTree = "<group>"; };
-		3E1FE6891998473700C7C43A /* IdentifiableToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdentifiableToken.h; sourceTree = "<group>"; };
-		3E1FE68A1998473700C7C43A /* InvalidArgumentException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidArgumentException.h; sourceTree = "<group>"; };
-		3E1FE68B1998473700C7C43A /* InvalidOperationException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidOperationException.h; sourceTree = "<group>"; };
-		3E1FE68C1998473700C7C43A /* NullArgumentException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NullArgumentException.h; sourceTree = "<group>"; };
-		3E1FE68D1998473700C7C43A /* Observable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Observable.h; sourceTree = "<group>"; };
-		3E1FE68E1998473700C7C43A /* Observer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
-		3E1FE68F1998473700C7C43A /* StringHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringHelper.h; sourceTree = "<group>"; };
-		3E1FE6901998473700C7C43A /* StringLiteral.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringLiteral.h; sourceTree = "<group>"; };
 		3E1FE6951998476500C7C43A /* PlatformDesign */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PlatformDesign; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E1FE6971998476500C7C43A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3E1FE69E1998481A00C7C43A /* AdvancedObservable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdvancedObservable.cpp; sourceTree = "<group>"; };
@@ -92,16 +82,26 @@
 		3E50566E19B9767700BBF9B8 /* ExtensionManager.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionManager.pb.h; sourceTree = "<group>"; };
 		3E63844619BD5BE9003DFFE6 /* libprotobuf.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprotobuf.dylib; path = ../../../../../opt/local/lib/libprotobuf.dylib; sourceTree = "<group>"; };
 		3E6A2A8719A5B38A0036BC24 /* BasicRequest.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BasicRequest.proto; sourceTree = "<group>"; };
-		3E936B0319A0073F00688107 /* InvalidExtensionException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidExtensionException.h; sourceTree = "<group>"; };
 		3E95BEC719A7024500C48D8B /* BasicResponse.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BasicResponse.proto; sourceTree = "<group>"; };
 		3EA7E6E01997314C00838B4D /* libPlatform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPlatform.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA8A168199FBD76005D63E4 /* MacExtensionScenarios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MacExtensionScenarios.cpp; sourceTree = "<group>"; };
-		3EE778D81999C46000A43901 /* ExtensionInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionInterface.h; sourceTree = "<group>"; };
-		3EE778DA1999C46000A43901 /* ExtensionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionManager.h; sourceTree = "<group>"; };
-		3EE778DB1999C48700A43901 /* Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extension.h; sourceTree = "<group>"; };
 		3EE778DD1999C4B000A43901 /* ExtensionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExtensionManager.cpp; sourceTree = "<group>"; };
 		3EE778DF1999C4CC00A43901 /* Extension.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Extension.cpp; sourceTree = "<group>"; };
 		3EE778E01999C4CC00A43901 /* ExtensionLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExtensionLoader.cpp; sourceTree = "<group>"; };
+		3EF78A3219C4FB4300976ADA /* Exceptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exceptions.h; sourceTree = "<group>"; };
+		3EF78A3319C4FB4300976ADA /* ExtensionInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionInterface.h; sourceTree = "<group>"; };
+		3EF78A3419C4FB4300976ADA /* ExtensionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionManager.h; sourceTree = "<group>"; };
+		3EF78A3519C4FB4300976ADA /* Identifiable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Identifiable.h; sourceTree = "<group>"; };
+		3EF78A3619C4FB4300976ADA /* IdentifiableToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdentifiableToken.h; sourceTree = "<group>"; };
+		3EF78A3719C4FB4300976ADA /* InvalidArgumentException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidArgumentException.h; sourceTree = "<group>"; };
+		3EF78A3819C4FB4300976ADA /* InvalidExtensionException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidExtensionException.h; sourceTree = "<group>"; };
+		3EF78A3919C4FB4300976ADA /* InvalidOperationException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidOperationException.h; sourceTree = "<group>"; };
+		3EF78A3A19C4FB4300976ADA /* NullArgumentException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NullArgumentException.h; sourceTree = "<group>"; };
+		3EF78A3B19C4FB4300976ADA /* Observable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Observable.h; sourceTree = "<group>"; };
+		3EF78A3C19C4FB4300976ADA /* Observer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
+		3EF78A3D19C4FB4300976ADA /* StringHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringHelper.h; sourceTree = "<group>"; };
+		3EF78A3E19C4FB4300976ADA /* StringLiteral.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringLiteral.h; sourceTree = "<group>"; };
+		3EF78A3F19C4FB6400976ADA /* Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extension.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,34 +125,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E1FE6751998466E00C7C43A /* Include */ = {
+		3E1FE676199846E200C7C43A /* Platform */ = {
 			isa = PBXGroup;
 			children = (
-				3EE778D61999C30D00A43901 /* OSDependent */,
-				3EE778D81999C46000A43901 /* ExtensionInterface.h */,
-				3EE778DA1999C46000A43901 /* ExtensionManager.h */,
-				3E1FE6871998473700C7C43A /* Exceptions.h */,
-				3E1FE6881998473700C7C43A /* Identifiable.h */,
-				3E1FE6891998473700C7C43A /* IdentifiableToken.h */,
-				3E1FE68A1998473700C7C43A /* InvalidArgumentException.h */,
-				3E936B0319A0073F00688107 /* InvalidExtensionException.h */,
-				3E1FE68B1998473700C7C43A /* InvalidOperationException.h */,
-				3E1FE68C1998473700C7C43A /* NullArgumentException.h */,
-				3E1FE68D1998473700C7C43A /* Observable.h */,
-				3E1FE68E1998473700C7C43A /* Observer.h */,
-				3E1FE68F1998473700C7C43A /* StringHelper.h */,
-				3E1FE6901998473700C7C43A /* StringLiteral.h */,
-			);
-			path = Include;
-			sourceTree = "<group>";
-		};
-		3E1FE676199846E200C7C43A /* Source */ = {
-			isa = PBXGroup;
-			children = (
+				3E6A2A8519A5B3000036BC24 /* Messages */,
 				3EE778D41999C05F00A43901 /* OSDependent */,
+				3EF78A3219C4FB4300976ADA /* Exceptions.h */,
+				3EF78A3319C4FB4300976ADA /* ExtensionInterface.h */,
 				3EE778DD1999C4B000A43901 /* ExtensionManager.cpp */,
+				3EF78A3419C4FB4300976ADA /* ExtensionManager.h */,
+				3EF78A3519C4FB4300976ADA /* Identifiable.h */,
+				3EF78A3619C4FB4300976ADA /* IdentifiableToken.h */,
+				3EF78A3719C4FB4300976ADA /* InvalidArgumentException.h */,
+				3EF78A3819C4FB4300976ADA /* InvalidExtensionException.h */,
+				3EF78A3919C4FB4300976ADA /* InvalidOperationException.h */,
+				3EF78A3A19C4FB4300976ADA /* NullArgumentException.h */,
+				3EF78A3B19C4FB4300976ADA /* Observable.h */,
+				3EF78A3C19C4FB4300976ADA /* Observer.h */,
+				3EF78A3D19C4FB4300976ADA /* StringHelper.h */,
+				3EF78A3E19C4FB4300976ADA /* StringLiteral.h */,
 			);
-			path = Source;
+			path = Platform;
 			sourceTree = "<group>";
 		};
 		3E1FE6961998476500C7C43A /* PlatformDesign */ = {
@@ -186,17 +179,17 @@
 		3E1FE6AD1998611A00C7C43A /* Designer */ = {
 			isa = PBXGroup;
 			children = (
-				3E1FE6AE1998614800C7C43A /* Include */,
+				3E1FE6AE1998614800C7C43A /* Designer */,
 			);
 			path = Designer;
 			sourceTree = "<group>";
 		};
-		3E1FE6AE1998614800C7C43A /* Include */ = {
+		3E1FE6AE1998614800C7C43A /* Designer */ = {
 			isa = PBXGroup;
 			children = (
 				3E1FE6AF1998618200C7C43A /* Designer.h */,
 			);
-			path = Include;
+			path = Designer;
 			sourceTree = "<group>";
 		};
 		3E2A1CC0199C511F00EA94BD /* Extensions */ = {
@@ -243,10 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				3E63844619BD5BE9003DFFE6 /* libprotobuf.dylib */,
-				3E6A2A8519A5B3000036BC24 /* Messages */,
 				3E1FE6AC1998533300C7C43A /* Submodules */,
-				3E1FE676199846E200C7C43A /* Source */,
-				3E1FE6751998466E00C7C43A /* Include */,
+				3E1FE676199846E200C7C43A /* Platform */,
 				3E1FE6961998476500C7C43A /* PlatformDesign */,
 				3EA7E6E11997314C00838B4D /* Products */,
 			);
@@ -288,24 +279,9 @@
 		3EE778D51999C08800A43901 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				3EF78A3F19C4FB6400976ADA /* Extension.h */,
 				3EE778DF1999C4CC00A43901 /* Extension.cpp */,
 				3EE778E01999C4CC00A43901 /* ExtensionLoader.cpp */,
-			);
-			path = Mac;
-			sourceTree = "<group>";
-		};
-		3EE778D61999C30D00A43901 /* OSDependent */ = {
-			isa = PBXGroup;
-			children = (
-				3EE778D71999C41B00A43901 /* Mac */,
-			);
-			path = OSDependent;
-			sourceTree = "<group>";
-		};
-		3EE778D71999C41B00A43901 /* Mac */ = {
-			isa = PBXGroup;
-			children = (
-				3EE778DB1999C48700A43901 /* Extension.h */,
 			);
 			path = Mac;
 			sourceTree = "<group>";
@@ -417,7 +393,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ${SRCROOT}/Messages\n/opt/local/bin/protoc --cpp_out=Generated *.proto";
+			shellScript = "cd ${SRCROOT}/Platform/Messages\n/opt/local/bin/protoc --cpp_out=Generated *.proto";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -8,7 +8,7 @@
 #ifndef Platform_AdvancedObservable_h
 #define Platform_AdvancedObservable_h
 
-#include "../Include/Observable.h"
+#include "../Platform/Observable.h"
 
 using namespace MuddledManaged;
 

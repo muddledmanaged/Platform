@@ -8,7 +8,7 @@
 #ifndef SimpleTestExtension_SimpleTestEntry_h
 #define SimpleTestExtension_SimpleTestEntry_h
 
-#include "../../../../Include/ExtensionManager.h"
+#include "../../../../Platform/ExtensionManager.h"
 
 extern MuddledManaged::Platform::ExtensionManager * gpExtensionManager;
 

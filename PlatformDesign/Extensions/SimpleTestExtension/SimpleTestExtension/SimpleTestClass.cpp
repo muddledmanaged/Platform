@@ -5,7 +5,7 @@
 //  Created by Wahid Tanner on 6/12/14.
 //
 
-#include "../Include/SimpleTestClass.h"
+#include "SimpleTestClass.h"
 
 using namespace std;
 

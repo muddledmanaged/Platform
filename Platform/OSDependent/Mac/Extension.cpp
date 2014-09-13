@@ -7,8 +7,8 @@
 
 #include <dlfcn.h>
 
-#include "../../../Include/Exceptions.h"
-#include "../../../Include/OSDependent/Mac/Extension.h"
+#include "../../Exceptions.h"
+#include "Extension.h"
 
 using namespace std;
 using namespace MuddledManaged;

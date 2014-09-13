@@ -7,9 +7,9 @@
 
 #include <string>
 
-#include "../Submodules/Designer/Include/Designer.h"
+#include "../Submodules/Designer/Designer/Designer.h"
 
-#include "../Include/ExtensionManager.h"
+#include "../Platform/ExtensionManager.h"
 
 using namespace std;
 using namespace MuddledManaged;

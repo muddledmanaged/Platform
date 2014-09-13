@@ -8,9 +8,9 @@
 #include <dirent.h>
 #include <dlfcn.h>
 
-#include "../../../Include/Exceptions.h"
-#include "../../../Include/ExtensionManager.h"
-#include "../../../Include/OSDependent/Mac/Extension.h"
+#include "../../Exceptions.h"
+#include "../../ExtensionManager.h"
+#include "Extension.h"
 
 using namespace std;
 using namespace MuddledManaged;

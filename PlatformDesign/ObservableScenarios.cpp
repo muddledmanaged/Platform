@@ -7,7 +7,7 @@
 
 #include <string>
 
-#include "../Submodules/Designer/Include/Designer.h"
+#include "../Submodules/Designer/Designer/Designer.h"
 
 #include "SimpleObservable.h"
 #include "SimpleObserver.h"

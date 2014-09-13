@@ -7,9 +7,9 @@
 
 #include <string>
 
-#include "../Submodules/Designer/Include/Designer.h"
+#include "../Submodules/Designer/Designer/Designer.h"
 
-#include "../Include/IdentifiableToken.h"
+#include "../Platform/IdentifiableToken.h"
 
 using namespace MuddledManaged;
 

@@ -8,8 +8,8 @@
 #ifndef Platform_SimpleObserver_h
 #define Platform_SimpleObserver_h
 
-#include "../Include/Identifiable.h"
-#include "../Include/Observer.h"
+#include "../Platform/Identifiable.h"
+#include "../Platform/Observer.h"
 #include "SimpleObservable.h"
 
 using namespace MuddledManaged;

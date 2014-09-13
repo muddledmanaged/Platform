@@ -5,7 +5,7 @@
 //  Created by Wahid Tanner on 6/15/14.
 //
 
-#include "../Include/ExtensionManager.h"
+#include "ExtensionManager.h"
 
 using namespace std;
 using namespace MuddledManaged;

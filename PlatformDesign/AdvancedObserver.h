@@ -10,8 +10,8 @@
 
 #include <memory>
 
-#include "../Include/Identifiable.h"
-#include "../Include/Observer.h"
+#include "../Platform/Identifiable.h"
+#include "../Platform/Observer.h"
 #include "AdvancedObservable.h"
 
 using namespace MuddledManaged;

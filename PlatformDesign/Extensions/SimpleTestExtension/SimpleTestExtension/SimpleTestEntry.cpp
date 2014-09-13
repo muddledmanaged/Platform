@@ -7,8 +7,8 @@
 
 #include <string>
 
-#include "../Include/SimpleTestEntry.h"
-#include "../Include/SimpleTestClass.h"
+#include "SimpleTestEntry.h"
+#include "SimpleTestClass.h"
 
 using namespace std;
 using namespace MuddledManaged;

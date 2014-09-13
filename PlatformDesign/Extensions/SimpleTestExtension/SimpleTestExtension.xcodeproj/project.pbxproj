@@ -15,12 +15,12 @@
 
 /* Begin PBXFileReference section */
 		3E2A1CCA199C519600EA94BD /* libSimpleTestExtension.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSimpleTestExtension.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E2A1CD9199C540000EA94BD /* SimpleTestClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTestClass.h; sourceTree = "<group>"; };
-		3E2A1CDA199C540000EA94BD /* SimpleTestEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTestEntry.h; sourceTree = "<group>"; };
 		3E2A1CDB199C541B00EA94BD /* SimpleTestClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleTestClass.cpp; sourceTree = "<group>"; };
 		3E2A1CDC199C541B00EA94BD /* SimpleTestEntry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleTestEntry.cpp; sourceTree = "<group>"; };
 		3E63844819BD5C2F003DFFE6 /* libprotobuf.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprotobuf.dylib; path = ../../../../../../../../opt/local/lib/libprotobuf.dylib; sourceTree = "<group>"; };
 		3EE9817E19A458E000C79A4F /* libPlatform.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPlatform.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/MuddledManaged-fhcntcbsdobvamdjdfrjukhvkkge/Build/Products/Debug/libPlatform.a"; sourceTree = "<group>"; };
+		3EF78A4019C4FF9F00976ADA /* SimpleTestClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTestClass.h; sourceTree = "<group>"; };
+		3EF78A4119C4FF9F00976ADA /* SimpleTestEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTestEntry.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,8 +41,7 @@
 			children = (
 				3E63844819BD5C2F003DFFE6 /* libprotobuf.dylib */,
 				3EE9817E19A458E000C79A4F /* libPlatform.a */,
-				3E2A1CD7199C53B200EA94BD /* Include */,
-				3E2A1CD8199C53BC00EA94BD /* Source */,
+				3E2A1CD8199C53BC00EA94BD /* SimpleTestExtension */,
 				3E2A1CCB199C519600EA94BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,22 +54,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3E2A1CD7199C53B200EA94BD /* Include */ = {
+		3E2A1CD8199C53BC00EA94BD /* SimpleTestExtension */ = {
 			isa = PBXGroup;
 			children = (
-				3E2A1CD9199C540000EA94BD /* SimpleTestClass.h */,
-				3E2A1CDA199C540000EA94BD /* SimpleTestEntry.h */,
-			);
-			path = Include;
-			sourceTree = "<group>";
-		};
-		3E2A1CD8199C53BC00EA94BD /* Source */ = {
-			isa = PBXGroup;
-			children = (
+				3EF78A4019C4FF9F00976ADA /* SimpleTestClass.h */,
+				3EF78A4119C4FF9F00976ADA /* SimpleTestEntry.h */,
 				3E2A1CDB199C541B00EA94BD /* SimpleTestClass.cpp */,
 				3E2A1CDC199C541B00EA94BD /* SimpleTestEntry.cpp */,
 			);
-			path = Source;
+			path = SimpleTestExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

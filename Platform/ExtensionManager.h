@@ -14,7 +14,7 @@
 #include <unordered_map>
 
 #include "ExtensionInterface.h"
-#include "../Messages/Generated/ExtensionManager.pb.h"
+#include "Messages/Generated/ExtensionManager.pb.h"
 
 namespace MuddledManaged
 {

@@ -7,9 +7,9 @@
 
 #include <string>
 
-#include "../Submodules/Designer/Include/Designer.h"
+#include "../Submodules/Designer/Designer/Designer.h"
 
-#include "../Include/StringLiteral.h"
+#include "../Platform/StringLiteral.h"
 
 using namespace MuddledManaged;
 
