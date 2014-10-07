@@ -101,7 +101,7 @@
 		3E2A1CC2199C519600EA94BD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = MuddledManaged;
 			};
 			buildConfigurationList = 3E2A1CC5199C519600EA94BD /* Build configuration list for PBXProject "SimpleTestExtension" */;
@@ -219,6 +219,7 @@
 		3E2A1CCF199C519600EA94BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -232,6 +233,7 @@
 		3E2A1CD0199C519600EA94BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
