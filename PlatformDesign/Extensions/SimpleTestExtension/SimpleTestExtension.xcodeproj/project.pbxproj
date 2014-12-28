@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E2A1CDD199C541B00EA94BD /* SimpleTestClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E2A1CDB199C541B00EA94BD /* SimpleTestClass.cpp */; };
 		3E2A1CDE199C541B00EA94BD /* SimpleTestEntry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E2A1CDC199C541B00EA94BD /* SimpleTestEntry.cpp */; };
-		3E63844919BD5C2F003DFFE6 /* libprotobuf.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E63844819BD5C2F003DFFE6 /* libprotobuf.dylib */; };
 		3EE9817F19A458E000C79A4F /* libPlatform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE9817E19A458E000C79A4F /* libPlatform.a */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +28,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EE9817F19A458E000C79A4F /* libPlatform.a in Frameworks */,
-				3E63844919BD5C2F003DFFE6 /* libprotobuf.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
