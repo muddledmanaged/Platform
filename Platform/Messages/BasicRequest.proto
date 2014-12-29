@@ -4,29 +4,29 @@ message RequestParameterValue
 {
     enum ParameterValueOperation
     {
-        None = 0;
-        Equal = 1;
-        Greater = 2;
-        GreaterInclusive = 3;
-        Lesser = 4;
-        LesserInclusive = 5;
-        Contain = 6;
-        ContainBy = 7;
-        Intersect = 8;
-        MatchPattern = 9;
+        NoValueOp = 0;
+        EqualValueOp = 1;
+        GreaterValueOp = 2;
+        GreaterInclusiveValueOp = 3;
+        LesserValueOp = 4;
+        LesserInclusiveValueOp = 5;
+        ContainValueOp = 6;
+        ContainByValueOp = 7;
+        IntersectValueOp = 8;
+        MatchPatternValueOp = 9;
     }
 
     enum ParameterValueType
     {
-        Single = 0;
-        Range = 1;
-        Set = 2;
+        SingleValue = 0;
+        RangeOfValues = 1;
+        SetOfValues = 2;
     }
 
     enum ParameterValueInverter
     {
-        Normal = 0;
-        Inverted = 1;
+        NormalValue = 0;
+        InvertedValue = 1;
     }
 
     optional string label = 1;
@@ -41,15 +41,15 @@ message RequestParameterGroup
 {
     enum ParameterGroupOperation
     {
-        And = 0;
-        Or = 1;
-        Exclusive = 2;
+        AndGroupOp = 0;
+        OrGroupOp = 1;
+        ExclusiveGroupOp = 2;
     }
 
     enum ParameterGroupInverter
     {
-        Normal = 0;
-        Inverted = 1;
+        NormalGroup = 0;
+        InvertedGroup = 1;
     }
 
     required ParameterGroupOperation operation = 1;

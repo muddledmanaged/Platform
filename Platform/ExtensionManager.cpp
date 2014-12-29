@@ -62,17 +62,16 @@ string Platform::ExtensionManager::sendMessage (const string & message)
 {
     Platform::ExtensionManagerRequest request;
     Platform::ExtensionManagerResponse response;
-    if (!request.ParseFromString(message))
+    if (request.parse(message.data()) == 0)
     {
-        response.mutable_response()->set_errorencountered(true);
+        response.createNewResponse().setErrorEncountered(true);
     }
     else
     {
-        response.mutable_response()->set_errorencountered(false);
+        response.createNewResponse().setErrorEncountered(false);
     }
 
-    string responseString;
-    response.SerializeToString(&responseString);
+    string responseString = response.serialize();
     return responseString;
 }
 
